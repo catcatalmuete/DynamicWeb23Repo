@@ -1,13 +1,13 @@
 import React from 'react'
-import './recipecard.css'
+import styles from './RecipeCard.module.css'
 
 export default function RecipeInst(props) {
     const {instructions} = props
 
     return (
         <div>
-        <h3 className={'instTitle'}>Instructions</h3>
-        <ol className={'instructions'}>
+        <h3 className={styles.instTitle}>Instructions</h3>
+        <ol className={styles.instructions}>
             {instructions.map((i, index) => (
             <li key={index}>{i}</li>
             ))}

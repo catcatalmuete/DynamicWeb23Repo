@@ -1,13 +1,13 @@
 import React from 'react'
-import './recipecard.css'
+import styles from './RecipeCard.module.css'
 
 export default function RecipeInfo(props) {
   const {title, description} = props
 
   return (
     <div>
-      <h1 className={'title'}>{title}</h1>
-      <p className={'description'}>{description}</p>
+      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.description}>{description}</p>
     </div>
   )
 }
