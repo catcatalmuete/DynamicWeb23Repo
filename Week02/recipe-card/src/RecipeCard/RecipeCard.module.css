@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Hammersmith+One&display=swap');
 body {
     background-color: #A9BD93;
+    font-family: "Hammersmith One", sans-serif;
     display: flex;
     justify-content: center;
     margin: 50px;
@@ -40,7 +42,7 @@ body {
 
 .title {
     margin: 0px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Dela Gothic One", sans-serif;
     font-size: 42px;
     color: black;
 }
@@ -48,7 +50,6 @@ body {
 .description {
     padding: 15px 0px 0px 0px;
     margin: 0px;
-    font-family: "Roboto", sans-serif;
     font-size: 24px;
     color: black;
 } 
@@ -62,26 +63,22 @@ body {
 
 .ingTitle {
     margin: 0px;
-    font-family: "Roboto", sans-serif;
     font-size: 20px;
     color: black;
 }
 
 .ingredients {
-    font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: black;
 }
 
 .instTitle {
     margin: 0px;
-    font-family: "Roboto", sans-serif;
     font-size: 20px;
     color: black;
 }
 
 .instructions {
-    font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: black;
 }
