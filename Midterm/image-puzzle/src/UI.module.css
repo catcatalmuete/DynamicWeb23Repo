@@ -1,18 +1,16 @@
-* {
-    box-sizing: border-box;
-  }
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
   
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   
   button {
     background-color: #239299;
     border-color: transparent;
+    box-sizing: border-box;
     color: white;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
@@ -22,8 +20,8 @@
   }
   
   .container {
-    width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 10px;
   }
   
   .grid {
@@ -31,4 +29,7 @@
     grid-template-columns: 20% 20% 20% 20%;
     grid-gap: .25rem;
   }
+
+  
+  
 

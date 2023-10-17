@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import cx from 'classnames'
 import styles from './UI.module.css'
 import Piece1 from './assets/1.png'
 import Piece2 from './assets/2.png'
@@ -42,7 +41,7 @@ export default function Puzzle(props) {
 
   // handleChoice
   const handleChoice = (piece) => {
-    // check if we have a choice one
+    // setChoiceOne if choiceOne does not exist, setChoiceTwo if it does exist
     choiceOne ? setChoiceTwo(piece) : setChoiceOne(piece)
   }
 
@@ -65,8 +64,6 @@ export default function Puzzle(props) {
         })
       })
       resetTurn()
-    } else {
-      setTimeout(() => resetTurn(), 1000)
     }
   }, [choiceOne, choiceTwo])
 
