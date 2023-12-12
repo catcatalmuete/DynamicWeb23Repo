@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
 export default function Homepage() {
+    // Make background color light blue
+    document.body.style.backgroundColor = "#1E40AF";
+    
   const [dogs, setDogs] = useState([])
   const [text, setText] = useState("")
   const [searched, setSearched] = useState(false)
