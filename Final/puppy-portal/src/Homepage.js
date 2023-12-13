@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import { Link } from "react-router-dom"
+import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
     const [dogs, setDogs] = useState([])
@@ -11,7 +12,6 @@ export default function Homepage() {
         const fetchDogData = async () => {
             const response = await axios.get('https://api.thedogapi.com/v1/breeds', {
                 headers: {
-                  'Content-Type': 'application/json',
                   'x-api-key': 'live_cSjFM6xcW6N5CHmKymnXZmYXvVodqORddhLlFK4KrPQuKfblyKpk3p6S5Y1dMY8t',
                 },
               });

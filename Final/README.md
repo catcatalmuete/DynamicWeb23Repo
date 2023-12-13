@@ -1,3 +1,5 @@
 Final Project Proposal:
-Responsive Image Gallery for Digital Camera Photos
-    App that allows user to keep track of photos
+The Puppy Portal
+    Uses the Dog API to display dog information
+    Uses react-router-dom to go to single dog profile   Routes that display individual information
+    Uses Tailwind CSS for stomic styling
