@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Homepage from './routes/Homepage';
-import Dog from './routes/Dog';
+import Homepage from './Homepage';
+import Dog from './Dog';
 
 function App() {
   return (
