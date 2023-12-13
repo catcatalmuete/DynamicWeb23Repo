@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import axios from "axios"
 import { Link } from "react-router-dom"
 
 export default function Homepage() {
@@ -8,25 +9,23 @@ export default function Homepage() {
 
     useEffect(() => {
         const fetchDogData = async () => {
-            const res = await fetch("https://api.thedogapi.com/v1/breeds" , {
+            const response = await axios.get('https://api.thedogapi.com/v1/breeds', {
                 headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': 'live_cSjFM6xcW6N5CHmKymnXZmYXvVodqORddhLlFK4KrPQuKfblyKpk3p6S5Y1dMY8t',
+                  'Content-Type': 'application/json',
+                  'x-api-key': 'live_cSjFM6xcW6N5CHmKymnXZmYXvVodqORddhLlFK4KrPQuKfblyKpk3p6S5Y1dMY8t',
                 },
-            });
-            const data = await res.json()
-            setDogs(data)
-        }
-
-        setSearched(false)
-        fetchDogData()
+              });
+              const data = response.data;
+              setDogs(data);
+        };
+          
+        setSearched(false);
+        fetchDogData();
     }, [])
 
     const searchForDog = async () => {
-        const res = await fetch(
-        `https://api.thedogapi.com/v1/breeds/search?q=${text}`
-        )
-        const data = await res.json()
+        const response = await axios.get(`https://api.thedogapi.com/v1/breeds/search?q=${text}`)
+        const data = response.data
         setDogs(data)
     }
 

@@ -1,6 +1,7 @@
-import React from "react"
-import { useState, useEffect } from "react"
-import { Link, useParams } from "react-router-dom"
+import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 
 export default function Dog() {
   const [dog, setDog] = useState([])
@@ -8,16 +9,14 @@ export default function Dog() {
 
   useEffect(() => {
     const fetchDogData = async () => {
-        const res = await fetch(
-          `https://api.thedogapi.com/v1/breeds/search?q=${name}`
-        )
-        const data = await res.json()
-        setDog(data)
-        console.log(data)
-    }
-
-    fetchDogData()
-  }, [name])
+        const response = await axios.get(`https://api.thedogapi.com/v1/breeds/search?q=${name}`);
+        const data = response.data;
+        setDog(data);
+        console.log(data);
+    };
+  
+    fetchDogData();
+  }, [name]);
 
   return (
     <>
